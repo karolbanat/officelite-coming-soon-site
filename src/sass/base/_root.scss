@@ -1,0 +1,88 @@
+@use './mixins';
+
+:root {
+	// colors
+	--clr-primary-300: hsl(228 100% 75%);
+	--clr-primary-400: hsl(228 100% 66%);
+	--clr-primary-400-light-300: hsl(228 100% 66% / 0.1);
+	--clr-primary-400-light-400: hsl(228 100% 66% / 0.15);
+	--clr-primary-400-light-500: hsl(228 100% 66% / 0.25);
+	--clr-primary-400-light-600: hsl(228 100% 66% / 0.35);
+
+	--clr-accent-300: hsl(0 83% 65%);
+
+	--clr-neutral-300: hsl(227 13% 52%);
+	--clr-neutral-400: hsl(228 22% 26%);
+	--clr-neutral-700: hsl(229 22% 19%);
+
+	--clr-shadow-300: hsl(227 34% 45% / 0.25);
+	--clr-shadow-300-dark: hsl(227 34% 45% / 0.75);
+	--clr-shadow-400: hsl(227 52% 50% / 0.25);
+
+	--clr-white: hsl(0 0% 100%);
+	--clr-black: hsl(0 0% 0 %);
+
+	// shadows
+	--shadow-300: 0 2.5rem 2.5rem var(--clr-shadow-400); // button
+	--shadow-400: 0 5rem 5rem var(--clr-shadow-300); // card and form
+	--shadow-400-dark: 0 5rem 5rem var(--clr-shadow-300-dark); // form select
+
+	// font families
+	--ff-primary: 'Kumbh Sans', sans-serif;
+
+	// font weights
+	--fw-400: 400;
+	--fw-700: 700;
+
+	// font sizes
+	--fz-300: 1.2rem;
+	--fz-400: 1.6rem;
+	--fz-500: 2rem;
+	--fz-600: 3.2rem;
+	--fz-700: 4rem;
+	--fz-900: 5.6rem;
+
+	--fz-primary-heading: var(--fz-700);
+	--fz-countdown-number: var(--fz-600);
+	--fz-countdown-number-label: var(--fz-300);
+
+	// border radius
+	--borr-300: 0.4rem;
+	--borr-400: 0.8rem;
+	--borr-500: 1.3rem;
+	--borr-900: 100vmax;
+
+	// spacing
+	--spacing-em-200: 1em;
+	--spacing-em-400: 2em;
+	--spacing-em-500: 2.5em;
+	--spacing-em-600: 3em;
+	--spacing-em-700: 3.5em;
+
+	--spacing-rem-300: 1.6rem;
+	--spacing-rem-400: 2.4rem;
+	--spacing-rem-500: 3.6rem;
+	--spacing-rem-600: 4.5rem;
+	--spacing-rem-800: 7rem;
+	--spacing-rem-900: 16.5rem;
+
+	// gaps
+	--gap-300: 1.2rem;
+	--gap-400: 3.2rem;
+
+	@include mixins.mq(medium) {
+		--fz-countdown-number: var(--fz-900);
+		--fz-countdown-number: var(--fz-400);
+
+		--borr-300: var(--borr-500);
+
+		--gap-300: 1.6rem;
+		--gap-400: 2.4rem;
+	}
+
+	@include mixins.mq(large) {
+		--fz-primary-heading: var(--fz-900);
+
+		--gap-400: 3rem;
+	}
+}
