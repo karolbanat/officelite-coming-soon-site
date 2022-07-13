@@ -25,29 +25,87 @@
 </head>
 
 <body>
-    Work smarter. Save time.
+    <header class="header">
+        <div class="container">
+            <nav class="navigation">
+                <a href="#"
+                   class="navigation__logo"
+                   aria-label="Home page">
+                    <img src="./dist/assets/shared/logo.svg"
+                         alt=""></a>
+            </nav>
+            <div class="even-colums-medium">
+                <article class="header__content">
+                    <h1 id="primary-heading"
+                        class="header__primary-heading">Work smarter. Save time.</h1>
+                    <p>Easily manage your projects. Get on the list and receive in-app perks available only to
+                        early subscribers. We are moving into final development and getting ready for official launch
+                        soon.</p>
+                    <div class="coming">
+                        <!-- Note: later do dynamic time injection, 30 days in the future -->
+                        <p class="coming__info">Coming <time datetime="2020-11-04">4 Nov 2020</time></p>
+                        <!-- Note: later do dynamic countdown -->
+                        <ul role="list"
+                            class="countdown countdown--secondary">
+                            <li class="countdown__card">
+                                <span class="countdown__time">47</span>
+                                <p class="countdown__label">days</p>
+                            </li>
+                            <li class="countdown__card">
+                                <span class="countdown__time">07</span>
+                                <p class="countdown__label">ours</p>
+                            </li>
+                            <li class="countdown__card">
+                                <span class="countdown__time">56</span>
+                                <p class="countdown__label">min</p>
+                            </li>
+                            <li class="countdown__card">
+                                <span class="countdown__time">14</span>
+                                <p class="countdown__label">sec</p>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                <form class="subscription-form">
+                    <fieldset>
+                        <input aria-label="Name"
+                               id="name"
+                               type="text"
+                               placeholder="Name"
+                               class="subscription-form__input">
 
-    Easily manage your projects. Get on the list and receive in-app perks available only to
-    early subscribers. We are moving into final development and getting ready for official launch soon.
+                        <input aria-label="Email address"
+                               id="email"
+                               type="email"
+                               placeholder="Email Address"
+                               class="subscription-form__input">
 
-    <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-    Coming 4 Nov 2020
+                        <select id="pricing-plan"
+                                value="basic"
+                                class="subscription-form__input subscription-form__select">
+                            <option value="basic"><span>Basic Pack</span> Free</option>
+                            <option value="pro"><span>Pro Pack</span> $9.99</option>
+                            <option value="ultimate"><span>Ultimate Pack</span> $19.99</option>
+                        </select>
 
-    <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-    47 Days
-    07 Hours
-    56 Min
-    14 Sec
+                        <input aria-label="Phone number"
+                               id="phone-number"
+                               type="tel"
+                               placeholder="Phone Number"
+                               class="subscription-form__input">
 
-    Name
-    Email Address
-    Basic Pack Free
-    Basic Pack Free
-    Pro Pack $9.99
-    Ultimate Pack $19.99
-    Phone Number
-    Company
-    Get on the list
+                        <input aria-label="Company"
+                               id="company"
+                               type="tel"
+                               placeholder="Company"
+                               class="subscription-form__input">
+                    </fieldset>
+                    <button type="submit"
+                            class="button button--primary">Get on the list</button>
+                </form>
+            </div>
+        </div>
+    </header>
 </body>
 
 </html>
