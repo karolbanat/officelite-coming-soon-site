@@ -25,46 +25,127 @@
 </head>
 
 <body>
-    A simple solution to complex tasks is coming soon
 
-    Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new
-    collaboration platform built with an intuitive interface to improve productivity.
+    <header aria-labelledby="primary-heading"
+            class="header">
+        <div class="container">
+            <nav class="navigation">
+                <a href="#"
+                   class="navigation__logo"
+                   aria-label="Home page">
+                    <img src="./dist/assets/shared/logo.svg"
+                         alt=""></a>
+            </nav>
+            <div class="even-colums-medium">
+                <article class="header__content">
+                    <h1 id="primary-heading"
+                        class="header__primary-heading">A simple solution to complex tasks is coming soon</h1>
+                    <p>Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new
+                        collaboration platform built with an intuitive interface to improve productivity.</p>
+                    <a href="#"
+                       class="button button--primary">Get Started</a>
+                </article>
+                <img class="header__main-image"
+                     src="./dist/assets/home/illustration-charts.svg"
+                     alt="">
+            </div>
+        </div>
+    </header>
 
-    Get Started
+    <main>
+        <div class="container">
+            <section aria-label="Pricings."
+                     class="pricing">
+                <ul role="list"
+                    class="even-colums-large">
+                    <li>
+                        <article class="card">
+                            <header class="card__header">
+                                <h2 class="card__heading">Basic</h2>
+                                <span class="card__price">Free</span>
+                                <p class="card__price-label">Up to 5 users for free</p>
+                            </header>
+                            <ul role="list"
+                                class="benefit-list">
+                                <li>Basic document collaboration</li>
+                                <li>2 gb storage</li>
+                                <li>Great security and support</li>
+                            </ul>
+                            <a href="#"
+                               class="button card__button">Try for Free</a>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card card--highlighted">
+                            <header class="card__header">
+                                <h2 class="card__heading">Pro</h2>
+                                <span class="card__price">$9.99</span>
+                                <p class="card__price-label">Per user, billed monthly</p>
+                            </header>
+                            <ul role="list"
+                                class="benefit-list">
+                                <li>All essential integrations</li>
+                                <li>50 gb storage</li>
+                                <li>More control and insights</li>
+                            </ul>
+                            <a href="#"
+                               class="button card__button">Try for Free</a>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card card--highlighted">
+                            <header class="card__header">
+                                <h2 class="card__heading">Ultimate</h2>
+                                <span class="card__price">$19.99</span>
+                                <p class="card__price-label">Per user, billed monthly</p>
+                            </header>
+                            <ul role="list"
+                                class="benefit-list">
+                                <li>Robust work management</li>
+                                <li>100 gb storage</li>
+                                <li>VIP support</li>
+                            </ul>
+                            <a href="#"
+                               class="button card__button">Try for Free</a>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
 
-    Basic
-    Free
-    Up to 5 users for free
-    Basic document collaboration
-    2 gb storage
-    Great security and support
-    Try for Free
-
-    Pro
-    $9.99
-    Per user, billed monthly
-    All essential integrations
-    50 gb storage
-    More control and insights
-    Try for Free
-
-    Ultimate
-    $19.99
-    Per user, billed monthly
-    Robust work management
-    100 gb storage
-    VIP support
-    Try for Free
-
-    <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-    Coming 4 Nov 2020
-
-    <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-    47 Days
-    07 Hours
-    56 Min
-    14 Sec
-    Get Started
+    <footer class="footer">
+        <div class="container">
+            <div class="flex-space-between">
+                <div class="coming">
+                    <!-- Note: later do dynamic time injection, 30 days in the future -->
+                    <p class="coming__info"><time datetime="2020-11-04">4 Nov 2020</time></p>
+                    <!-- Note: later do dunamic countdown -->
+                    <ul role="list"
+                        class="countdown">
+                        <li class="countdown__card">
+                            <span class="countdown__time">47</span>
+                            <p class="countdown__label">days</p>
+                        </li>
+                        <li class="countdown__card">
+                            <span class="countdown__time">07</span>
+                            <p class="countdown__label">ours</p>
+                        </li>
+                        <li class="countdown__card">
+                            <span class="countdown__time">56</span>
+                            <p class="countdown__label">min</p>
+                        </li>
+                        <li class="countdown__card">
+                            <span class="countdown__time">14</span>
+                            <p class="countdown__label">sec</p>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#"
+                   class="button button--primary">Get Started</a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
