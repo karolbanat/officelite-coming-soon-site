@@ -1,0 +1,7 @@
+.container {
+	--padding-inline: var(--spacing-rem-400, 1em);
+	--max-width: 69.375em; // 1110px
+
+	max-width: min(100% - 2 * var(--padding-inline), var(--max-width));
+	margin-inline: auto;
+}
