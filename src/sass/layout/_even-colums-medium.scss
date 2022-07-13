@@ -1,0 +1,32 @@
+@use '../base/mixins';
+
+.even-colums {
+	display: grid;
+	align-items: center;
+
+	&--medium {
+		@include mixins.mq(medium) {
+			grid-auto-flow: column;
+			grid-auto-columns: 1fr;
+		}
+	}
+
+	&--large {
+		gap: var(--gap-400);
+
+		@include mixins.mq(large) {
+			grid-auto-flow: column;
+			grid-auto-columns: 1fr;
+		}
+	}
+
+	&--reversed {
+		& > *:last-child {
+			grid-row: 1;
+
+			@include mixins.mq(medium) {
+				grid-row: auto;
+			}
+		}
+	}
+}
