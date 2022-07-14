@@ -1,0 +1,112 @@
+@use '../base/mixins';
+
+.card {
+	// for spacing
+	--padding-inline: 4rem;
+	--padding-block: 4rem;
+	--gap: 4rem;
+	// for card styles
+	--clr-background-body: var(--clr-white);
+	--clr-body: var(--clr-neutral-300);
+	--clr-heading: var(--clr-neutral-400);
+	--clr-price: var(--clr-neutral-400);
+	// for button styles
+	--clr-text-button: var(--clr-primary-400);
+	--clr-text-button-hover: var(--clr-primary-400);
+	--clr-background-button: var(--clr-primary-400-light-400);
+	--clr-background-button-hover: var(--clr-primary-400-light-500);
+
+	// layout
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--gap);
+
+	// card spacing
+	padding: {
+		inline: var(--padding-inline);
+		block: var(--padding-block);
+	}
+
+	// card text
+	text-align: center;
+	line-height: 1.15;
+
+	// card styles
+	color: var(--clr-body);
+	background-color: var(--clr-background-body);
+	border-radius: var(--borr-500);
+	box-shadow: var(--shadow-400);
+
+	@include mixins.mq(medium) {
+		--padding-inline: 4.8rem;
+		--padding-block: 4.8rem;
+		--gap: 2rem;
+		align-items: flex-start;
+		text-align: initial;
+	}
+
+	@include mixins.mq(large) {
+		--padding-inline: 2.4rem;
+		--padding-block: 4rem;
+		--gap: 4rem;
+		align-items: center;
+		text-align: center;
+	}
+
+	// -- card elements
+	&__body {
+		--gap: var(--spacing-rem-700);
+		display: grid;
+		align-items: center;
+		gap: var(--gap);
+		min-width: 100%;
+
+		@include mixins.mq(medium) {
+			--gap: 0;
+			grid-auto-flow: column;
+			grid-auto-columns: 1fr;
+		}
+
+		@include mixins.mq(large) {
+			--gap: var(--spacing-rem-700);
+			grid-auto-flow: row;
+		}
+	}
+
+	&__heading {
+		font-size: var(--fz-500);
+		color: var(--clr-heading);
+	}
+
+	&__price {
+		font-size: var(--fz-900);
+		font-weight: var(--fw-700);
+		color: var(--clr-price);
+	}
+
+	&__price-label {
+		margin-top: 0.5rem;
+		color: var(--clr-price);
+	}
+
+	&__button {
+		// custom properties from button component
+		--clr-text: var(--clr-text-button);
+		--clr-text-hover: var(--clr-text-button-hover);
+		--clr-background: var(--clr-background-button);
+		--clr-background-hover: var(--clr-background-button-hover);
+	}
+
+	// card modifiers
+	&--highlighted {
+		--clr-background-body: var(--clr-primary-400);
+		--clr-body: var(--clr-white);
+		--clr-heading: var(--clr-white);
+		--clr-price: var(--clr-white);
+		--clr-text-button: var(--clr-primary-400);
+		--clr-text-button-hover: var(--clr-primary-300);
+		--clr-background-button: var(--clr-white);
+		--clr-background-button-hover: var(--clr-white);
+	}
+}
