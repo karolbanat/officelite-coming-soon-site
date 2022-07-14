@@ -1,0 +1,36 @@
+@use '../base/mixins';
+
+.header {
+	text-align: center;
+
+	@include mixins.mq(medium) {
+		text-align: initial;
+	}
+
+	&__content {
+		& p {
+			--fz-regular: var(--fz-400, 1.6rem);
+
+			@include mixins.mq(large) {
+				--fz-regular: 1.8rem;
+			}
+		}
+	}
+
+	&__primary-heading {
+		margin-bottom: var(--spacing-rem-400);
+		font-size: var(--fz-primary-heading);
+	}
+
+	&__main-image {
+		--max-width: 60%;
+		max-width: var(--max-width);
+		margin-left: auto;
+		margin-right: auto;
+
+		@include mixins.mq(medium) {
+			--max-width: 80%;
+			margin-right: 0;
+		}
+	}
+}
