@@ -29,7 +29,7 @@
 		margin-right: auto;
 
 		@include mixins.mq(medium) {
-			--max-width: 80%;
+			--max-width: 82.5%;
 			margin-right: 0;
 		}
 	}
