@@ -15,6 +15,10 @@
 				--fz-regular: 1.8rem;
 			}
 		}
+
+		& > *:last-child {
+			margin-top: var(--spacing-rem-500);
+		}
 	}
 
 	&__primary-heading {

@@ -1,0 +1,40 @@
+.button {
+	display: inline-block;
+
+	// spacing
+	padding: {
+		block: var(--spacing-em-100, 1);
+		inline: var(--spacing-em-300, 2em);
+	}
+
+	// text
+	font-size: var(--fz-400);
+	font-weight: var(--fw-700);
+	text-decoration: none;
+	line-height: 1.15;
+
+	//style
+	color: var(--clr-text, white);
+	background-color: var(--clr-background, hsl(0 0% 0% / 0.5));
+	border-radius: var(--borr-900);
+
+	transition: background-color 0.35s ease, color 0.35s ease;
+	cursor: pointer;
+
+	&:hover,
+	&:focus-visible {
+		color: var(--clr-text-hover, white);
+		background-color: var(--clr-background-hover, hsl(0 0% 0% / 0.25));
+	}
+
+	&--primary {
+		--clr-text: var(--clr-white);
+		--clr-text-hover: var(--clr-white);
+		--clr-background: var(--clr-primary-400);
+		--clr-background-hover: var(--clr-primary-300);
+	}
+
+	&--shadow {
+		box-shadow: var(--shadow-300);
+	}
+}
