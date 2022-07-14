@@ -4,11 +4,12 @@
 	--padding-top: var(--spacing-em-400, 2em);
 	--margin-bottom: var(--spacing-rem-800, 5rem);
 
-	padding-top: var(--padding-top);
-	margin-bottom: var(--margin-bottom);
-
 	display: flex;
 	justify-content: center;
+
+	// spacing
+	padding-top: var(--padding-top);
+	margin-bottom: var(--margin-bottom);
 
 	@include mixins.mq(medium) {
 		--padding-top: var(--spacing-em-600);
