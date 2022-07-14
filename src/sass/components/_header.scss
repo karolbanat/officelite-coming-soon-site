@@ -40,6 +40,7 @@
 		@include mixins.mq(medium) {
 			--max-width: 82.5%;
 			margin-right: 0;
+			transform: scale(1.1);
 		}
 	}
 }
