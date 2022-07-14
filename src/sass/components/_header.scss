@@ -1,12 +1,16 @@
 @use '../base/mixins';
 
 .header {
+	--margin-bottom: var(--spacing-rem-700, 6rem);
+	margin-bottom: var(--margin-bottom);
 	text-align: center;
 
 	@include mixins.mq(medium) {
+		--margin-bottom: var(--spacing-rem-900);
 		text-align: initial;
 	}
 
+	// --- header elements
 	&__content {
 		& p {
 			--fz-regular: var(--fz-400, 1.6rem);
