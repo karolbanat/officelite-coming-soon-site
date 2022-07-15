@@ -17,9 +17,7 @@
 	--clr-background-button-hover: var(--clr-primary-400-light-500);
 
 	// layout
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	@include mixins.flex-vertical-center;
 	gap: var(--gap);
 
 	// card spacing

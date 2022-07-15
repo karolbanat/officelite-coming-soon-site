@@ -3,10 +3,8 @@
 .flex-space-between {
 	--gap: var(--spacing-em-300);
 
-	display: flex;
-	flex-direction: column;
+	@include mixins.flex-vertical-center;
 	justify-content: center;
-	align-items: center;
 	gap: var(--gap);
 
 	@include mixins.mq(large) {
