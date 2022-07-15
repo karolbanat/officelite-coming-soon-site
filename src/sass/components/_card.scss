@@ -4,7 +4,7 @@
 	// for spacing
 	--padding-inline: 4rem;
 	--padding-block: 4rem;
-	--gap: 4rem;
+	--gap: var(--gap-500);
 	// for card styles
 	--clr-background-body: var(--clr-white);
 	--clr-body: var(--clr-neutral-300);
@@ -47,7 +47,7 @@
 	@include mixins.mq(large) {
 		--padding-inline: 2.4rem;
 		--padding-block: 4rem;
-		--gap: 4rem;
+		--gap: var(--gap-500);
 		align-items: center;
 		text-align: center;
 	}
