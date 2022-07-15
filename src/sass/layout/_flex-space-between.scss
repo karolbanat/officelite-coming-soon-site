@@ -1,0 +1,16 @@
+@use '../base/mixins';
+
+.flex-space-between {
+	--gap: var(--spacing-em-300);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: var(--gap);
+
+	@include mixins.mq(large) {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}

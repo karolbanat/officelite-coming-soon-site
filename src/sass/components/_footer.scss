@@ -1,0 +1,12 @@
+@use '../base/mixins';
+
+.footer {
+	padding-block: var(--spacing-rem-900);
+	text-align: center;
+	background-color: var(--clr-neutral-700);
+	color: var(--clr-white);
+
+	@include mixins.mq(large) {
+		text-align: initial;
+	}
+}

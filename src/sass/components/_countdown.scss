@@ -1,0 +1,36 @@
+.countdown {
+	--background-card: var(--clr-neutral-400);
+	--clr-number-card: var(--clr-white);
+	--clr-text-card: var(--clr-neutral-300);
+
+	display: flex;
+	gap: var(--spacing-rem-300);
+
+	// elements
+	&__card {
+		padding: var(--spacing-rem-300);
+
+		text-align: center;
+		line-height: 1.15;
+
+		background-color: var(--background-card);
+		border-radius: var(--borr-300);
+	}
+
+	&__time {
+		font-size: var(--fz-countdown-number);
+		font-weight: var(--fw-700);
+		color: var(--clr-number-card);
+	}
+
+	&__label {
+		font-size: var(--fz-countdown-number-label);
+		color: var(--clr-text-card);
+	}
+
+	// modifiers
+	&--secondary {
+		--background-card: var(--clr-primary-400-light-300);
+		--clr-number-card: var(--clr-primary-400);
+	}
+}
