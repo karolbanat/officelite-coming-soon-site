@@ -16,6 +16,7 @@
 	//style
 	color: var(--clr-text, white);
 	background-color: var(--clr-background, hsl(0 0% 0% / 0.5));
+	border: none;
 	border-radius: var(--borr-900);
 
 	transition: background-color 0.35s ease, color 0.35s ease;
