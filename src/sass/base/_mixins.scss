@@ -13,3 +13,10 @@
 	flex-direction: column;
 	align-items: center;
 }
+
+@mixin background-image($image, $pos: top, $size: contain, $repeat: no-repeat) {
+	background-image: $image;
+	background-position: $pos;
+	background-size: $size;
+	background-repeat: $repeat;
+}

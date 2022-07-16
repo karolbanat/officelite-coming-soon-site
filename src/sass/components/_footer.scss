@@ -15,10 +15,12 @@
 	color: var(--clr-white);
 
 	// background image styles
-	background-image: url('../../../dist/assets/home/bg-pattern-footer.svg');
-	background-size: cover;
-	background-position: top 15rem center;
-	background-repeat: no-repeat;
+	@include mixins.background-image(
+		url('../../../dist/assets/home/bg-pattern-footer.svg'),
+		top 15rem center,
+		cover,
+		no-repeat
+	);
 
 	@include mixins.mq(medium) {
 		--space-top: 49rem;
