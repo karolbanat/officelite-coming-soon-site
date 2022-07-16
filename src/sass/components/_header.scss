@@ -43,4 +43,13 @@
 			transform: scale(1.1);
 		}
 	}
+
+	// --- modifiers
+	&--main {
+		@include mixins.background-image(url('../assets/home/bg-pattern-header.svg'), top -12.5rem center);
+
+		@include mixins.mq(medium) {
+			@include mixins.background-image(url('../assets/home/bg-pattern-header.svg'), top -15rem right -20rem);
+		}
+	}
 }
