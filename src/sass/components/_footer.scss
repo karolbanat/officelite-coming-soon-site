@@ -1,12 +1,35 @@
 @use '../base/mixins';
 
 .footer {
-	padding-block: var(--spacing-rem-900);
+	--space-top: 76.5rem;
+	--padding-block: var(--spacing-rem-900);
+
+	// for 'intersecting' with section above
+	padding-top: calc(var(--padding-block) + var(--space-top));
+	margin-top: calc(-1 * var(--space-top));
+
+	padding-bottom: var(--padding-block);
+
 	text-align: center;
 	background-color: var(--clr-neutral-700);
 	color: var(--clr-white);
 
+	// background image styles
+	background-image: url('../../../dist/assets/home/bg-pattern-footer.svg');
+	background-size: cover;
+	background-position: top 15rem center;
+	background-repeat: no-repeat;
+
+	@include mixins.mq(medium) {
+		--space-top: 49rem;
+		background-position: top 25rem center;
+	}
+
 	@include mixins.mq(large) {
+		--space-top: 24.5rem;
 		text-align: initial;
+
+		background-size: 125%;
+		background-position: top -37.5rem left -50rem;
 	}
 }
