@@ -46,10 +46,10 @@
 
 	// --- modifiers
 	&--main {
-		@include mixins.background-image(url('../assets/home/bg-pattern-header.svg'), top -12.5rem center);
+		@include mixins.background-image(url('../assets/home/bg-pattern-header.svg'), top -25vh center, 125%);
 
 		@include mixins.mq(medium) {
-			@include mixins.background-image(url('../assets/home/bg-pattern-header.svg'), top -15rem right -20rem);
+			@include mixins.background-image(url('../assets/home/bg-pattern-header.svg'), bottom 25vh left 47.5vw, 75%);
 		}
 	}
 }
