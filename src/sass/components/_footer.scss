@@ -3,6 +3,9 @@
 .footer {
 	--space-top: 76.5rem;
 	--padding-block: var(--spacing-rem-900);
+	--bg-image-url: url('../assets/home/bg-pattern-footer.svg');
+	--bg-image-pos: top 25vh center;
+	--bg-image-size: 300%;
 
 	// for 'intersecting' with section above
 	padding-top: calc(var(--padding-block) + var(--space-top));
@@ -15,17 +18,17 @@
 	color: var(--clr-white);
 
 	// background image styles
-	@include mixins.background-image(url('../assets/home/bg-pattern-footer.svg'), top 25vh center, 300%, no-repeat);
+	@include mixins.background-image(var(--bg-image-url), var(--bg-image-pos), var(--bg-image-size));
 
 	@include mixins.mq(medium) {
 		--space-top: 49rem;
-		@include mixins.background-image(url('../assets/home/bg-pattern-footer.svg'), bottom -45vh center, 150%, no-repeat);
+		--bg-image-pos: bottom -45vh center;
+		--bg-image-size: 150%;
 	}
 
 	@include mixins.mq(large) {
 		--space-top: 24.5rem;
+		--bg-image-pos: top 45% right 2.5vw;
 		text-align: initial;
-
-		@include mixins.background-image(url('../assets/home/bg-pattern-footer.svg'), top 45% right 2.5vw, 150%, no-repeat);
 	}
 }

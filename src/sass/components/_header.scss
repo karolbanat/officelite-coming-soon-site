@@ -2,6 +2,10 @@
 
 .header {
 	--margin-bottom: var(--spacing-rem-700, 6rem);
+	--bg-image-url: url('../assets/home/bg-pattern-header.svg');
+	--bg-image-pos: top -25vh center;
+	--bg-image-size: 125%;
+
 	margin-bottom: var(--margin-bottom);
 	text-align: center;
 
@@ -46,10 +50,11 @@
 
 	// --- modifiers
 	&--main {
-		@include mixins.background-image(url('../assets/home/bg-pattern-header.svg'), top -25vh center, 125%);
+		@include mixins.background-image(var(--bg-image-url), var(--bg-image-pos), var(--bg-image-size));
 
 		@include mixins.mq(medium) {
-			@include mixins.background-image(url('../assets/home/bg-pattern-header.svg'), bottom 25vh left 47.5vw, 75%);
+			--bg-image-pos: bottom 25vh left 47.5vw;
+			--bg-image-size: 75%;
 		}
 	}
 }
