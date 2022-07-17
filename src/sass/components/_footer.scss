@@ -15,23 +15,17 @@
 	color: var(--clr-white);
 
 	// background image styles
-	@include mixins.background-image(
-		url('../../../dist/assets/home/bg-pattern-footer.svg'),
-		top 15rem center,
-		cover,
-		no-repeat
-	);
+	@include mixins.background-image(url('../assets/home/bg-pattern-footer.svg'), top 25vh center, 300%, no-repeat);
 
 	@include mixins.mq(medium) {
 		--space-top: 49rem;
-		background-position: top 25rem center;
+		@include mixins.background-image(url('../assets/home/bg-pattern-footer.svg'), bottom -45vh center, 150%, no-repeat);
 	}
 
 	@include mixins.mq(large) {
 		--space-top: 24.5rem;
 		text-align: initial;
 
-		background-size: 125%;
-		background-position: top -50rem left -60rem;
+		@include mixins.background-image(url('../assets/home/bg-pattern-footer.svg'), top 45% right 2.5vw, 150%, no-repeat);
 	}
 }
