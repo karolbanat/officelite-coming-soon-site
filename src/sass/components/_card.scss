@@ -107,26 +107,14 @@
 		--clr-background-button: var(--clr-white);
 		--clr-background-button-hover: var(--clr-white);
 
-		@include mixins.background-image(
-			url('../../../dist/assets/home/bg-pattern-pricing.svg'),
-			bottom 20rem center,
-			cover
-		);
+		@include mixins.background-image(url('../assets/home/bg-pattern-pricing.svg'), bottom 2.5rem center, 150%);
 
 		@include mixins.mq(medium) {
-			@include mixins.background-image(
-				url('../../../dist/assets/home/bg-pattern-pricing.svg'),
-				top 50% right 27.5rem,
-				cover
-			);
+			@include mixins.background-image(url('../assets/home/bg-pattern-pricing.svg'), top 50% right 5rem, 150%);
 		}
 
 		@include mixins.mq(large) {
-			@include mixins.background-image(
-				url('../../../dist/assets/home/bg-pattern-pricing.svg'),
-				bottom 20rem center,
-				cover
-			);
+			@include mixins.background-image(url('../assets/home/bg-pattern-pricing.svg'), bottom 1.5rem center, 250%);
 		}
 	}
 }
