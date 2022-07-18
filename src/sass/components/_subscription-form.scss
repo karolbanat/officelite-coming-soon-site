@@ -54,6 +54,7 @@
 			inline: var(--spacing-em-100);
 		}
 
+		color: var(--clr-input-text);
 		background-color: transparent;
 		border: none;
 		border-bottom: 1px solid var(--clr-input-border);
@@ -67,6 +68,17 @@
 		&:focus-visible {
 			--clr-input-border: var(--clr-primary-400);
 			outline: 1px solid var(--clr-input-border);
+		}
+
+		&.error {
+			--clr-input-border: var(--clr-accent-300);
+			--clr-input-text: var(--clr-accent-300);
+
+			@include mixins.background-image(url('../../../dist/assets/sign-up/icon-cross.svg'), center right 2rem, none);
+
+			&::placeholder {
+				color: var(--clr-input-text);
+			}
 		}
 	}
 
