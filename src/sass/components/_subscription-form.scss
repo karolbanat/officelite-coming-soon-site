@@ -74,7 +74,7 @@
 			--clr-input-border: var(--clr-accent-300);
 			--clr-input-text: var(--clr-accent-300);
 
-			@include mixins.background-image(url('../../../dist/assets/sign-up/icon-cross.svg'), center right 2rem, none);
+			@include mixins.background-image(url('../assets/sign-up/icon-cross.svg'), center right 2rem, none);
 
 			&::placeholder {
 				color: var(--clr-input-text);
