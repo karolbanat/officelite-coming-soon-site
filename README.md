@@ -2,14 +2,14 @@
 
 This is a solution to the [Officelite coming soon site challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/officelite-coming-soon-site-M4DIPNz8g). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-### Screenshot
+### Screenshots
 
 ![](./screenshots/main-desktop.png)
 ![](./screenshots/main-tablet.png)
 ![](./screenshots/main-mobile.png)
-![](./screenshots/sign-up-desktop.png.png)
-![](./screenshots/sign-up-tablet.png.png)
-![](./screenshots/sign-up-mobile.png.png)
+![](./screenshots/sign-up-desktop.png)
+![](./screenshots/sign-up-tablet.png)
+![](./screenshots/sign-up-mobile.png)
 
 ### Links
 
