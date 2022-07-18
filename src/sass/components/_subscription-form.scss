@@ -54,15 +54,19 @@
 			inline: var(--spacing-em-100);
 		}
 
+		background-color: transparent;
 		border: none;
 		border-bottom: 1px solid var(--clr-input-border);
 
 		cursor: pointer;
 
-		&:hover,
+		&:hover {
+			--clr-input-border: var(--clr-primary-400);
+		}
+
 		&:focus-visible {
 			--clr-input-border: var(--clr-primary-400);
-			outline: none;
+			outline: 1px solid var(--clr-input-border);
 		}
 	}
 
