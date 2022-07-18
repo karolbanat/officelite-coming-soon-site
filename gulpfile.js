@@ -63,7 +63,7 @@ function javaScript(done) {
 				},
 				devtool: 'inline-source-map',
 				plugins: [new MomentLocalesPlugin()],
-			})
+			}).on('error', (err) => console.debug(err))
 		)
 		.pipe(sourcemaps.init({ loadMaps: true }))
 		.pipe(
