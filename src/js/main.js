@@ -47,8 +47,8 @@ const prepareDOMElements = () => {
 const prepareDOMEvents = () => {
 	if (subscriptionForm) {
 		submitBtn.addEventListener('click', handleSubmitBtn);
-		nameInput.addEventListener('focus', (e) => removeError);
-		emailInput.addEventListener('focus', (e) => removeError);
+		nameInput.addEventListener('focusin', removeError);
+		emailInput.addEventListener('focusin', removeError);
 		nameInput.addEventListener('focusout', validateName);
 		emailInput.addEventListener('focusout', validateEmail);
 	}
