@@ -78,11 +78,10 @@
 	@include mixins.mq(small) {
 		--fz-countdown-number: var(--fz-900);
 		--fz-countdown-number-label: var(--fz-400);
+		--borr-300: var(--borr-500);
 	}
 
 	@include mixins.mq(medium) {
-		--borr-300: var(--borr-500);
-
 		--gap-300: 1.6rem;
 		--gap-400: 2.4rem;
 	}
