@@ -1,24 +1,57 @@
 import moment from 'moment';
 
-const releaseDateLabel = document.querySelector('#release-date');
-const releaseDaysLeft = document.querySelector('#release-days');
-const releaseHoursLeft = document.querySelector('#release-hours');
-const releaseMinutesLeft = document.querySelector('#release-minutes');
-const releaseSecondsLeft = document.querySelector('#release-seconds');
+let releaseDateLabel;
+let releaseDaysLeft;
+let releaseHoursLeft;
+let releaseMinutesLeft;
+let releaseSecondsLeft;
 
-const subscriptionForm = document.querySelector('.subscription-form');
-const nameInput = subscriptionForm.querySelector('#name');
-const emailInput = subscriptionForm.querySelector('#email');
-const submitBtn = subscriptionForm.querySelector('#submit-btn');
+let subscriptionForm;
+let nameInput;
+let emailInput;
+let submitBtn;
+if (subscriptionForm) {
+	const nameInput = subscriptionForm.querySelector('#name');
+	const emailInput = subscriptionForm.querySelector('#email');
+	const submitBtn = subscriptionForm.querySelector('#submit-btn');
+}
 
 const releaseDate = moment().add(30, 'days').startOf('day');
 const emailRegex =
 	/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 const main = () => {
+	prepareDOMElements();
+	prepareDOMEvents();
+
 	loadReleaseDate();
 	handleCountdown();
 	setInterval(handleCountdown, 1000);
+};
+
+const prepareDOMElements = () => {
+	releaseDateLabel = document.querySelector('#release-date');
+	releaseDaysLeft = document.querySelector('#release-days');
+	releaseHoursLeft = document.querySelector('#release-hours');
+	releaseMinutesLeft = document.querySelector('#release-minutes');
+	releaseSecondsLeft = document.querySelector('#release-seconds');
+
+	subscriptionForm = document.querySelector('.subscription-form');
+	if (subscriptionForm) {
+		nameInput = subscriptionForm.querySelector('#name');
+		emailInput = subscriptionForm.querySelector('#email');
+		submitBtn = subscriptionForm.querySelector('#submit-btn');
+	}
+};
+
+const prepareDOMEvents = () => {
+	if (subscriptionForm) {
+		submitBtn.addEventListener('click', handleSubmitBtn);
+		nameInput.addEventListener('focus', (e) => removeError);
+		emailInput.addEventListener('focus', (e) => removeError);
+		nameInput.addEventListener('focusout', validateName);
+		emailInput.addEventListener('focusout', validateEmail);
+	}
 };
 
 // countdowns
@@ -67,8 +100,3 @@ const removeError = (e) => {
 
 // event listeners
 document.addEventListener('DOMContentLoaded', main);
-submitBtn.addEventListener('click', handleSubmitBtn);
-nameInput.addEventListener('focus', (e) => removeError);
-emailInput.addEventListener('focus', (e) => removeError);
-nameInput.addEventListener('focusout', validateName);
-emailInput.addEventListener('focusout', validateEmail);
