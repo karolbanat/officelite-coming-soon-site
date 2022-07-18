@@ -43,24 +43,29 @@
                         soon.</p>
                     <div class="coming">
                         <!-- Note: later do dynamic time injection, 30 days in the future -->
-                        <p class="coming__info">Coming <time datetime="2020-11-04">4 Nov 2020</time></p>
+                        <p class="coming__info">Coming <time id="release-date"
+                                  datetime="2020-11-04">4 Nov 2020</time></p>
                         <!-- Note: later do dynamic countdown -->
                         <ul role="list"
                             class="countdown countdown--secondary">
                             <li class="countdown__card">
-                                <span class="countdown__time">47</span>
+                                <span id="release-days"
+                                      class="countdown__time">47</span>
                                 <p class="countdown__label">days</p>
                             </li>
                             <li class="countdown__card">
-                                <span class="countdown__time">07</span>
+                                <span id="release-hours"
+                                      class="countdown__time">07</span>
                                 <p class="countdown__label">ours</p>
                             </li>
                             <li class="countdown__card">
-                                <span class="countdown__time">56</span>
+                                <span id="release-minutes"
+                                      class="countdown__time">56</span>
                                 <p class="countdown__label">min</p>
                             </li>
                             <li class="countdown__card">
-                                <span class="countdown__time">14</span>
+                                <span id="release-seconds"
+                                      class="countdown__time">14</span>
                                 <p class="countdown__label">sec</p>
                             </li>
                         </ul>
@@ -106,6 +111,8 @@
             </div>
         </div>
     </header>
+
+    <script src="./dist/js/bundle.min.js"></script>
 </body>
 
 </html>
