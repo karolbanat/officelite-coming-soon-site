@@ -4,7 +4,7 @@
 	--clr-text-card: var(--clr-neutral-300);
 
 	display: grid;
-	gap: var(--spacing-rem-300);
+	gap: var(--gap-300);
 	grid-auto-flow: column;
 	grid-auto-columns: 1fr;
 
